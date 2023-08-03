@@ -8,7 +8,7 @@
 
 - var 재선언 가능, 재할당 가능
 
-### 길이가 긴 변수를 선언할 때 → Camelcase
+#### 길이가 긴 변수를 선언할 때 → Camelcase
 
 ```javascript
 //const = constant(상수) 항상 변하지 않는 값을 의미
@@ -20,24 +20,30 @@ const vertLongVariableName;
 
 - 데이터를 나열하기 위한 방법 중 하나.
 
-항상 [ ] 안에 콤마(,)로 데이터들을 나열한다. 변수도 쓰일 수 있고, boolean, text, 숫자 등 데이터
+  항상 [ ] 안에 콤마(,)로 데이터들을 나열한다. 변수도 쓰일 수 있고, boolean, text, 숫자 등 데이터
 
-정렬이 가능하다.
+  정렬이 가능하다.
 
 ```javascript
 const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 
 daysOfWeek.push(“holiday”)
 
+--> const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat", "sun","holiday"];
+
 ```
 
-vscode 에서 array변수명. 하면 우측에 뜨는 Array object 내장 메소드들
+<hr>
+
+vscode 에서 array변수명. 하면 우측에 뜨는 Array object 내장 메소드들 계속 필요하고,
 
     $ push, indexOf, splice, map, sort, filter
 
-등 이런거 계~속 필요하고, 실제 서비스되는 웹앱들 이런거로 데이터 조작 되고 있고, 잘
+실제 서비스되는 웹앱들 이런거로 데이터 조작 되고 있고, 잘
 
 이해해두면 코딩 인생 편해진다.
+
+<br>
 
 ## objects
 
