@@ -1,4 +1,6 @@
-# Variables
+# #2welcome To Javascript
+
+## Variables
 
 - const 재선언 금지, 재할당 금지
 
@@ -14,7 +16,7 @@ const vertLongVariableName;
 
 ```
 
-# Arrays
+## Arrays
 
 - 데이터를 나열하기 위한 방법 중 하나.
 
@@ -37,7 +39,7 @@ vscode 에서 array변수명. 하면 우측에 뜨는 Array object 내장 메소
 
 이해해두면 코딩 인생 편해진다.
 
-# objects
+## objects
 
 - object는 property를 가진 데이터를 저장해주며, { } 를 사용한다.
 
@@ -58,7 +60,7 @@ const player = {
 
 설명이 필요한 정보가 담긴 데이터 리스트들은 object로
 
-# Functions
+## Functions
 
 ```javascript
 function sayHello(nameOfPerson, age) {
@@ -84,3 +86,14 @@ const player = {
 player.sayHello(14);
 player.name("james");
 ```
+
+## Conditionals
+
+- AND = && , OR = ||
+
+- js에서만 사용하는 연산자
+- == 동등연산자(값만 같으면 true)
+- === 일치연산자 (값과 타입 모두 true)
+
+        0 == false ---> true
+        0 === false ---> false
