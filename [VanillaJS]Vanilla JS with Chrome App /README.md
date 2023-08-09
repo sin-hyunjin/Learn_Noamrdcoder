@@ -405,13 +405,41 @@ input의 내용을 가져오려면 value라는 property를 찾아봐야 됨.
  
 ## # 4.1 Form Submission
 
+form 안의 속성에는 required(필수), maxlength , type, placeholder 등이있다.
+input 밖을 form으로 감싸면 따로 조건문을 주지않아도 html이 최대길이, 빈칸등을 잡아준다.
+문제는 버튼을 클릭할때 자동으로 submit(새로고침)된다는 것
+
  <br>
  
 ## # 4.2 Events
 
- <br>
- 
+```javascript
+function onLoginSubmit(event) {
+  event.preventDefault(); // 브라우저가 기본 동작을 실행하지 못하게 막기 // event object는 preventDefault함수를 기본적으로 갖고 있음
+  console.log(event);
+}
+
+loginForm.addEventListener("submit", onLoginSubmit); // submit 이벤트가 발생한다면, onLoginSubmit함수를 실행시킨다는 의미 // JS는 onLoginSubmit함수 호출시 인자를 담아서 호출함. 해당 인자는 event object를 담은 정보들
+```
+
+★ 중요 ★
+
+form을 submit하면 브라우저는 기본적으로 페이지를 새로고침 하도록 되어있다. << 우리가 원하는 것이 아님!
+preventDefault() 함수를 추가함으로써 브라우저의 기본 동작을 막을 수 있다!!
+
+이 preventDefault 함수는 EventListener 함수의 '첫 번째 argument' 안에 있는 함수이다. 첫 arument는 지금 막 벌어진 event들에 대한 정보를 갖고 있다.
+JS는(기본적으로)argument를 담아서 함수를 호출하는데, 이 argument가 기본 정보들을 제공하고 있다. ex) 누가 submit주체인지, 몇 시에 submit을 했는지 등등 콘솔에 출력해보면 알 수 있음
+
+<br>
+
 ## # 4.3 Events part Two
+
+addEventListener 안에 있는 함수는 직접 실행하지 않는다
+브라우저가 실행시켜주고
+브라우저에서 해당 이벤트에 대한 정보 즉, object를 가지게 된다.
+addEventListener의 함수에서 object에 대한 자리만 할당해주면
+해당 이벤트가 발생시킨 정보들에 대한 object들을 볼 수 있다!
+이때 해당 이벤트가 가진 기본 Default값을 발생시키지 않기 하게 위해선 preventDefault를 이용하여 막을 수 있다!
 
  <br>
  
