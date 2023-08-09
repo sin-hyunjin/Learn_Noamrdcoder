@@ -100,3 +100,17 @@ title3.addEventListener("click", handleTitle3Click);
 /* =====================================
    # 3.7 CSS in Javascript part Three       
    ===================================== */
+
+function handleTitle3Clicks() {
+  // const clickedClass = "active";
+  // if (title3.classList.contains(clickedClass) === clickedClass) {
+  //   title3.classList.remove(clickedClass);
+  // } else {
+  //   title3.classList.add(clickedClass);
+  // }
+
+  //toggle은 위 코드를 대신할수 있게 만들어준다.
+
+  title.classList.toggle("active");
+}
+title3.addEventListener("click", handleTitle3Clicks);
