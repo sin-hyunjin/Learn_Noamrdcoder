@@ -445,13 +445,82 @@ addEventListener의 함수에서 object에 대한 자리만 할당해주면
  
 ## # 4.4 Getting Username
 
+```javascript
+const HIDDEN_CLASSNAME = "hidden";
+```
+
+관습: string만 포함된 변수는 대문자로 쓴다 + 중요한 변수가 아니라 서.
+
+'hello!' + username + nice to meet you!; 는
+`hello ${username} nice to meet you `; 와 같으며 후자의 방법 사용하자.
+
+HTML의 어느 한 부분을 잡고 거기에 class 를 추가하거나 빼고 싶을 때는
+
+```javascript
+classList.add.('classname')
+classList.remove.('classname')
+```
+
+를 사용한다. 클래스를 마음대로 붙였다 뗄 수 있게 해준다. 위에서는 display:none;이 되어 있기 때문에 해당 html 태그(?)를 hide or show 할 수 있다.
+
+이 강의에서 한 것.
+
+1. 클릭하면, 자동으로 새로고침 되어 정보가 날아가는 것을 막고(preventDefault();)
+2. loginForm을 감추고(hidden)
+3. hidden 됐던 A 문구가 나타나고(remove hidden)
+4. A 문구와 username을 합쳐서 완전한 문구를 완성한다.
+
  <br>
  
 ## # 4.5 Saving Username
 
+```javascript
+localStorage.setItem("username", username);
+```
+
+```javascript
+localStorage.setItem(key, value);
+```
+
+- 로컬 저장소에 해당 키와 값을 저장함.
+
+  ```javascript
+  localStorage.getItem(key);
+  ```
+
+- 로컬 저장소에 해당 키에 해당되는 값을 불러옴.
+
+  ```javascript
+  localStorage.removeItem(key);
+  ```
+
+- 로컬 저장소에 해당 키에 해당되는 키, 값을 삭제함.
+
  <br>
  
 ## # 4.6 Loading Username
+
+paintGreetings 함수를 정의할 땐 매개변수와 사용한 매개변수를 동일하게 해줘야해요!
+
+```javascript
+function paintGreetings(username) {
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+  greeting.innterText = `Hello ${username}`;
+}
+```
+
+이런식으로요!
+
+```javascript
+function add(a, b) {
+  return a + b;
+}
+```
+
+했던거와 동일하게 생각하시면 됩니다
+username이라는 매개변수를 받아서 함수 안에서 사용하는 거죠!
+
+그리고 onLoginSubmit에서 ()안에 username을 써준 이유는 loginInput.value에서 받은 값을 사용해주기 위함이고, else문 안에 있는 두 번째 ()에서 매개변수로 saveUsername을 써준 이유는 localStorage에서 가져온 value값을 가져오기 위함이에요! 우리가 선언한 username은 onLoginSubmit 함수 안에 선언했기 때문에 두 번째 ()에도 username을 써주면 error가 발생하게 됩니다.
 
 <br>
  

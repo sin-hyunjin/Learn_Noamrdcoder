@@ -45,6 +45,7 @@ login42Form.addEventListener("submit", onLogin42Submit);
 /*==============================
     # 4.3 Events part Two
   ==============================*/
+
 const link = document.querySelector("a");
 //
 function handleLinkClick(event) {
@@ -54,15 +55,47 @@ function handleLinkClick(event) {
 }
 
 link.addEventListener("click", handleLinkClick);
+
 /*==============================
     # 4.4 Getting Username
-  ==============================*/
-/*==============================
+
     # 4.5 Saving Username
+
+     # 4.6 Loading Username
   ==============================*/
-/*==============================
-    # 4.6 Loading Username
-  ==============================*/
+
+const login44Form = document.querySelector("#login44-form");
+const login44Input = document.querySelector("#login44-form input");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden"; //중요한 정보가 아닌경우 대문자로 작성
+const USERNAME_KEY = "username";
+
+function onLogin44Submit(event) {
+  event.preventDefault();
+  const username = login44Input.value;
+  login44Form.classList.add(HIDDEN_CLASSNAME); //css클래스 추가
+  // setItem(key, value)
+  localStorage.setItem(USERNAME_KEY, username);
+
+  paintGreeting(username);
+}
+
+function paintGreeting(username) {
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savdUsername = localStorage.getItem(USERNAME_KEY);
+
+// localstorage에 값이 없으면 제출버튼 생성
+if (savdUsername === null) {
+  login44Form.classList.remove(HIDDEN_CLASSNAME);
+  login44Form.addEventListener("submit", onLogin44Submit);
+} else {
+  paintGreeting(savdUsername);
+}
+
 /*==============================
     # 4.7 Super Recap
   ==============================*/
