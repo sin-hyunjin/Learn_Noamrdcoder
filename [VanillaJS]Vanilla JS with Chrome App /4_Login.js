@@ -99,3 +99,9 @@ if (savdUsername === null) {
 /*==============================
     # 4.7 Super Recap
   ==============================*/
+if (savdUsername === null) {
+  login44Form.classList.remove(HIDDEN_CLASSNAME);
+  login44Form.addEventListener("submit", onLogin44Submit);
+} else {
+  paintGreeting(savdUsername);
+}
