@@ -523,5 +523,17 @@ username이라는 매개변수를 받아서 함수 안에서 사용하는 거죠
 그리고 onLoginSubmit에서 ()안에 username을 써준 이유는 loginInput.value에서 받은 값을 사용해주기 위함이고, else문 안에 있는 두 번째 ()에서 매개변수로 saveUsername을 써준 이유는 localStorage에서 가져온 value값을 가져오기 위함이에요! 우리가 선언한 username은 onLoginSubmit 함수 안에 선언했기 때문에 두 번째 ()에도 username을 써주면 error가 발생하게 됩니다.
 
 <br>
- 
-##  # 4.7 Super Recap
+
+## 5.1 Timeouts and Dates
+
+```javascript
+setInterval(sayHello, 1000);
+sayHello(); //라는 펑션을 1초마다 반복한다는 의미.
+```
+
+단 바로 실행되지 않고 1초 후 첫 시작이 되고 계속 1초마다 반복된다.
+
+```javascript
+setTimeout(sayHello, 1000);
+//1초 기다렸다가 한번만 실행.
+```
