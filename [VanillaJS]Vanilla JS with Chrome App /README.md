@@ -3,6 +3,8 @@
 
 - [#4. Login](#4-login)
 
+- [#5. Clock](#5-clock)
+
 # #2welcome To Javascript
 
 <br>
@@ -524,6 +526,10 @@ username이라는 매개변수를 받아서 함수 안에서 사용하는 거죠
 
 <br>
 
+# 5. CLOCK
+
+<br>
+
 ## 5.1 Timeouts and Dates
 
 ```javascript
@@ -536,4 +542,28 @@ sayHello(); //라는 펑션을 1초마다 반복한다는 의미.
 ```javascript
 setTimeout(sayHello, 1000);
 //1초 기다렸다가 한번만 실행.
+```
+
+<br>
+
+## 5.2 PadStart
+
+> 0> 00 로 바꾸고 싶을 때는 padStart(x, 'y') 를 사용하면 된다.
+
+**padStart**는 내가 갖고 있는 string 을 길게 만들어 주고 싶을 때 사용.
+
+뒤에서 추가하고 싶을 때는 padEnd를 사용하면 된다.
+
+x는 원하는 length를, y는 앞에 채워줄 내용을 입력하면 된다.
+
+<hr>
+
+- toLocaleTimeString() : string 문자 두개를 한번에 채우는 다른방식
+
+```javascript
+function sayHello() {
+  clock.innerText = new Date().toLocaleTimeString();
+}
+sayHello();
+setInterval(sayHello, 1000);
 ```
