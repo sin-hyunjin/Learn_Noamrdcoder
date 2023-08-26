@@ -10,10 +10,20 @@
   <body>
     <form class="hidden" id="login-form"></form>
     <h2 id="clock">00:00</h2>
+    <span
+      >로또 번호 :
+      <p class="num"></p
+    ></span>
     <h1 class="hidden" id="greeting"></h1>
 
     <!-- 파일을 분리시켜야 코드가독성이 좋다. -->
     <script src="./js/clock.js"></script>
     <script src="./js/greeting.js"></script>
+    <script>
+      const num = parseInt(Math.random() * 10 * 4.5);
+      const loto = document.querySelector(".num");
+      console.log(loto.innerText);
+      console.log(num);
+    </script>
   </body>
 </html>
