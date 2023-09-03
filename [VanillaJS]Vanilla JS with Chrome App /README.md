@@ -567,3 +567,5 @@ function sayHello() {
 sayHello();
 setInterval(sayHello, 1000);
 ```
+
+## 5.3 PadStart
