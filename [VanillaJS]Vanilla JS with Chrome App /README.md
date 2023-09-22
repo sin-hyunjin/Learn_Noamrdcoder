@@ -502,7 +502,7 @@ localStorage.setItem(key, value);
  
 ## # 4.6 Loading Username
 
-paintGreetings 함수를 정의할 땐 매개변수와 사용한 매개변수를 동일하게 해줘야해요!
+paintGreetings 함수를 정의할 땐 매개변수와 사용한 매개변수를 동일하게 해줘야한다.
 
 ```javascript
 function paintGreetings(username) {
