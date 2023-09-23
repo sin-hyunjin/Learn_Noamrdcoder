@@ -1,4 +1,4 @@
-# React JS 설치
+# React JS 설치방법
 
 react 와 react-dom import 해야한다.
 
