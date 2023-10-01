@@ -24,8 +24,10 @@ const countModifier = (count = 0, action) => {
   }
   return count;
 };
+
 //(1) store은 나의 데이터를 저장하는곳
 const countStore = legacy_createStore(countModifier);
+
 //(3))dispatch를 객체형태로 action을 통해 보낼수 있다.
 add.addEventListener("click", () => countStore.dispatch({ type: "ADD" }));
 minus.addEventListener("click", () => countStore.dispatch({ type: "MINUS" }));
