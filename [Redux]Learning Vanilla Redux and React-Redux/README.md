@@ -43,3 +43,5 @@ npm init <initializer>npm 6+에서 사용 가능
 yarn create <starter-kit-package>Yarn 0.25 이상에서 사용 가능
 
 # 파일 설정
+
+    index.js
