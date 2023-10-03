@@ -46,4 +46,5 @@ yarn create <starter-kit-package>Yarn 0.25 이상에서 사용 가능
 
     index.js
     vanilla.js 와 redux.js의 차이점을 알아보기 
+    react native로 앱설정하기
     
