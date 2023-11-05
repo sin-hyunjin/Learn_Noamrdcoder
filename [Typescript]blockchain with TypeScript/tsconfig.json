@@ -1,0 +1,12 @@
+{
+  "include": ["src"],
+  // 컴파일러 지정
+  "compilerOptions": {
+    "outDir": "build",
+    "target": "ES6", //어떤 버전으로 컴파일 할것인지
+    "lib": ["ES6", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "module": "CommonJS"
+  }
+}
